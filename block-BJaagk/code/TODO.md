@@ -7,8 +7,19 @@ function percentage(marks, total) {
 
 // Your code goes here
 
+let totalPercentage = function percentage(marks, total) {
+  return (marks * 100) / total;
+}
+
 let totalPercentage = function (marks, total) {
   return (marks * 100) / total;
+}
+
+let totalPercentage = (marks, total) => {
+  return (marks * 100) / total;
+}
+
+let totalPercentage = (marks, total) => (marks * 100) / total;
 }
 ```
 
@@ -18,44 +29,53 @@ let totalPercentage = function (marks, total) {
 function percentage(marks, total) {
   return (marks * 100) / total;
 }
-// Your answer
+// Function Declaration
 ```
 
 ```js
 let percentage = function percentage(marks, total) {
   return (marks * 100) / total;
 };
+// Function Expression
 ```
 
 ```js
 let percentage = function (marks, total) {
   return (marks * 100) / total;
 };
+// Function Expression
 ```
 
 ```js
 let percentage = (marks, total) => {
   return (marks * 100) / total;
 };
+// Function Expression
 ```
 
 ```js
 let percentage = (marks, total) => (marks * 100) / total;
+// Function Expression
 ```
 
 3. Why is a function definition an expression in JavaScript? Give one example of function expression.
 
-Ans - When we store any function into a variable then it becomes function expression.
-ex:-   
+Ans - Function is an object and object is a value that's the reason a function defination is an expression in JavaScript. 
+
 ```js
-let totalPercentage = function (marks, total) {
-  return (marks * 100) / total;
+
+let totalPercentage = function () {
+  
 }
+
+let obj = {};
+
+let totalPercentage = function(){};
 ```
 
 4. Why is a function call an expression in JavaScript?
 
-Ans - A function call expression is used to execute a specified function with the provided arguments.
+Ans - A function call always return a value that's why a function call is an expression in JavaScript.
 
 5. Write VALID and INVALID next to each example below with the reason.
 
@@ -64,9 +84,9 @@ function add(a, b) {
   return a + b;
 }
 
-let five = add(2, 3); valid
-five = add; invalid
-five = five(10, 11); valid
+let five = add(2, 3); valid 5
+five = add; valid
+five = five(10, 11); valid 21
 five = function () {
   return 'Hello';
 }; invalid
@@ -88,7 +108,8 @@ percentage(20, 50);
 
 7. What is the similarities between function definition and function call?
 
-Ans - A function call means invoking or calling that function. Unless a function is called there is no use of that function. ... So the difference between the function and function call is, A function is procedure to achieve a particular result while function call is using this function to achive that task.
+Ans - Function Defination is an expression (function is an object).
+Ans - Function Call is an expression (function call always returns a value).
 
 8. Is the code below valid or invalid. Explain with reason.
 
