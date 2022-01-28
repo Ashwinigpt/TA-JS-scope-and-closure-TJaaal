@@ -21,7 +21,7 @@ Create the execution context diagram of the following code line by line.
 var num = 21;
 function addFive(n) {
   return n + 5;
-}
+} 
 var five = addFive(0);
 var ten = addFive(5);
 console.log(five, ten);
@@ -67,3 +67,4 @@ let counter = function () {
   return increment();
 };
 ```
+
