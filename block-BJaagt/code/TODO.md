@@ -45,11 +45,8 @@ The above code will throw an error `Reference Error username is not defined`.
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // username is not defined
+console.log(useranme); // Arya
 ```
-In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
-
-The above code will throw an error `Reference Error username is not defined`.
 
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -73,11 +70,8 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // username has alraedy been declared
+console.log(useranme); // John
 ```
-In above code we are looking for the variable named `username` and `username` has alraedy been declared in outside so we can't access the variable defined in a function .
-
-The above code will throw an error ` SyntaxError 'username' has already been declared`.
 
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -88,11 +82,8 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(useranme); // username has alraedy been declared
+console.log(username); // John
 ```
-In above code we are looking for the variable named `username` and `username` has alraedy been declared in outside so we can't access the variable defined in a function .
-
-The above code will throw an error ` SyntaxError 'username' has already been declared`.
 
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -121,7 +112,7 @@ console.log(i, 'Second'); // output
 for (let i = 0; i < 10; i++) {
   console.log(i, 'First'); // output
 }
-console.log(i, 'Second'); // output
+console.log(i, 'Second'); //  ReferenceError: i is not defined
 ```
 0 'First'
 1 'First'
@@ -133,4 +124,3 @@ console.log(i, 'Second'); // output
 7 'First'
 8 'First'
 9 'First'
-10 'Second'
