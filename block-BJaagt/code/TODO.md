@@ -6,12 +6,12 @@ Example:
 function hello() {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // username is not defined
 ```
-
-In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
 
 The above code will throw an error `Reference Error username is not defined`.
+
 
 2. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -19,8 +19,12 @@ The above code will throw an error `Reference Error username is not defined`.
 {
   const username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // username is not defined
 ```
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
 
 3. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -28,8 +32,12 @@ console.log(useranme); // output
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // username is not defined
 ```
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
 
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -37,8 +45,12 @@ console.log(useranme); // output
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // username is not defined
 ```
+In above code we are looking for the variable named `username`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
+
+The above code will throw an error `Reference Error username is not defined`.
+
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -47,8 +59,12 @@ let username = 'John';
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // username has alraedy been declared
 ```
+In above code we are looking for the variable named `username` and `username` has alraedy been declared in outside so we can't access the variable defined in a function .
+
+The above code will throw an error ` SyntaxError 'username' has already been declared`.
+
 
 6. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -57,8 +73,12 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // username has alraedy been declared
 ```
+In above code we are looking for the variable named `username` and `username` has alraedy been declared in outside so we can't access the variable defined in a function .
+
+The above code will throw an error ` SyntaxError 'username' has already been declared`.
+
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -68,8 +88,12 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(useranme); // output
+console.log(useranme); // username has alraedy been declared
 ```
+In above code we are looking for the variable named `username` and `username` has alraedy been declared in outside so we can't access the variable defined in a function .
+
+The above code will throw an error ` SyntaxError 'username' has already been declared`.
+
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -79,6 +103,17 @@ for (var i = 0; i < 10; i++) {
 }
 console.log(i, 'Second'); // output
 ```
+0 'First'
+1 'First'
+2 'First'
+3 'First'
+4 'First'
+5 'First'
+6 'First'
+7 'First'
+8 'First'
+9 'First'
+10 'Second'
 
 9. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -88,3 +123,14 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(i, 'Second'); // output
 ```
+0 'First'
+1 'First'
+2 'First'
+3 'First'
+4 'First'
+5 'First'
+6 'First'
+7 'First'
+8 'First'
+9 'First'
+10 'Second'
