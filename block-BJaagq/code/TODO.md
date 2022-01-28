@@ -14,7 +14,7 @@ function change() {
 
 console.log(species); // 'human'
 change();
-console.log(species); // 'vampire'
+console.log(species); // 'human'
 ```
 
 <!-- Put your image below -->
@@ -64,16 +64,18 @@ function main() {
   function inner() {
     var four = 'Four';
 
-    console.log(one); // 'One'
-    console.log(two); // 'Two'
-    console.log(three); // 'Three'
+    console.log(one); // 1
+    console.log(two); // 2
+    console.log(three); // 3
   }
-  console.log(four); // not defined
+  console.log(four); // 4
   inner();
 }
 
 main();
-console.log(one, two, three, four); // 'One', 'Two', not defined, not defined
+console.log(one, two, three, four); // 5
+
+// four is not defined
 ```
 
 <!-- Put your image below -->
