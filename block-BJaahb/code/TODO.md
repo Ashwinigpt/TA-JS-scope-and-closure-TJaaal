@@ -26,10 +26,10 @@ function getCounter() {
 
 let counter = getCounter();
 
+counter(); // 0
 counter(); // 1
 counter(); // 2
 counter(); // 3
-counter(); // 4
 ```
 
 3. Create the execution context diagram
@@ -47,5 +47,5 @@ let tomato = makeColorChanger('tomato');
 blue();
 tomato();
 
-// What will be the background color after the execution of last line , tomato
+// What will be the background color after the execution of last line = tomato;
 ```
