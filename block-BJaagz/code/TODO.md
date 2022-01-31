@@ -6,12 +6,9 @@
 
 ```js
 function forEach(arr, cb){
-  return arr.reduce((acc, cv)=>{
-    if(cb(cv)){
-      acc.push(cv);
-    }
-    return acc;
-  }, [])
+  arr.reduce((acc, cv, i, arr)=>{
+    cb(cv, i, arr);
+})
 }
 
 forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
@@ -27,10 +24,8 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
 
 ```js
 function map(arr, cb){
-  return arr.reduce((acc, cv)=>{
-    if(cb(cv)){
-      acc.push(cv);
-    }
+  return arr.reduce((acc, cv, i, arr)=>{
+    acc.push(cb(cv, i, arr))
     return acc;
   }, [])
 }
@@ -46,7 +41,12 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 
 ```js
 function filter(arr, cb) {
-  return cb(name);
+  return arr.reduce((acc, cv, i, arr) => {
+    if(cb(cv, i, arr)){
+      acc.push(cv);
+    }
+    return acc;
+  },[]);
 }
 
 filter(['Sam', 'Jon', 'Arya'], (name) =>
