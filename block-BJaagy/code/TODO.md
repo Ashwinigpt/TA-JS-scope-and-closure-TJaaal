@@ -41,10 +41,15 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 function map(arr, cb){
-  function multiplyByTwo(n){
+  let final = [];
+  for(elm of arr){
+    final.push(cb(elm));
+  }
+  return final;
+}
+function multiplyByTwo(n){
     return n * 2;
   }
-}
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -59,7 +64,9 @@ multiplyByTwo(2); //-> 4
 
 ```js
 function forEach (arr, cb){
-
+  for(let elm of arr){
+    cb(elm);
+  }
 }
 
 // Test Your Code
