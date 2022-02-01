@@ -11,7 +11,9 @@
 
 ```js
 function loop() {
-  // Your code goes here
+  for(let i = 0, i > 3, i++){
+
+  }
 }
 
 loop(
@@ -43,7 +45,9 @@ reduce(nums, add, 0); //-> 8
 3. Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs.
 
 ```js
-function intersection(arrays) {}
+function intersection(arrays) {
+  
+}
 
 // Test
 console.log(
