@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName)); // AryaStark //
+console.log(window.fullName(firstName, lastName)); // AryaStark 
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -55,12 +55,12 @@ console.log(one, two); // 1 2
 5. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-console.log(addOne(0)); // 1 //
+console.log(addOne(0)); // 1
 function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(two); // 2 //
+console.log(two); // 2 
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -71,7 +71,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two); //        //
+console.log(two); // can't access 'addOne' before initialization //
 ```
 
 7. Make a Execution Context Diagram for the following JS and write the output.
@@ -82,7 +82,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // can't access 'addOne' before initialization //
 ```
 
 8. What will be the output of the following
@@ -135,7 +135,7 @@ function fullName(a, b) {
   return a + b; 
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name); // AryaStark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name); // name is not defined
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // AryaStark
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // AryaStark
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // 20
 ```
 
 16. Guess the output of the code below with a reason.
@@ -192,7 +192,7 @@ function sample() {
   if (true) {
     var username = 'John Snow';
   }
-  console.log(username);
+  console.log(username); // John Snow
 }
 sample();
 ```
@@ -218,7 +218,7 @@ function sample() {
     var username = 'John Snow';
     console.log(username); // John Snow
   }
-  console.log(username, 'second'); // 
+  console.log(username, 'second'); // John Snow second
 }
 sample();
 ```
@@ -357,6 +357,8 @@ let allFunctions = [
   multiplyThree,
   half,
 ];
+
+allFunctions.reduce((acc, cv) => cv(acc), 100);
 
 // Answer is: 447
 ```
