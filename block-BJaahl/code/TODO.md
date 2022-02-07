@@ -2,7 +2,7 @@
 
 ```js
 function once(cb) {
-  // your code goes here
+  return function 
 }
 
 // TEST
@@ -34,8 +34,10 @@ log(); // return undefinde (can't be called twice)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 
 ```js
-function once(cb) {
-  // your code goes here
+function once(...cb) {
+  return function(){
+    return cb;
+  }
 }
 
 // TEST
